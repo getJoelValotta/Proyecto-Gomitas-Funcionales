@@ -48,10 +48,10 @@ export default function ChatWidget() {
       if (res.ok && data.respuesta) {
         setMessages(prev => [...prev, { role: "assistant", content: data.respuesta }])
       } else {
-        setMessages(prev => [...prev, { role: "assistant", content: "Lo siento, ocurrió un error al consultar la IA." }])
+        setMessages(prev => [...prev, { role: "assistant", content: data.error || "Lo siento, ocurrió un error al consultar la IA." }])
       }
-    } catch (error) {
-      setMessages(prev => [...prev, { role: "assistant", content: "Error de conexión." }])
+    } catch (error: any) {
+      setMessages(prev => [...prev, { role: "assistant", content: error.message || "Error de conexión." }])
     } finally {
       setIsLoading(false)
     }
@@ -130,7 +130,7 @@ export default function ChatWidget() {
             value={input}
             onChange={(e) => setInput(e.target.value)}
             placeholder="Pregunta sobre stock o proveedores..."
-            className="flex-1 px-4 py-2 bg-slate-100 border-transparent rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:bg-white transition-all"
+            className="flex-1 px-4 py-2 bg-slate-100 border-transparent rounded-full text-sm text-slate-900 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:bg-white transition-all"
             disabled={isLoading}
           />
           <button

@@ -74,7 +74,7 @@ export async function POST(request: Request) {
   } catch (error: any) {
     console.error("Error en consultar-ia:", error)
     return NextResponse.json(
-      { error: "Error interno del servidor" },
+      { error: error?.message || "Error interno del servidor" },
       { status: 500 }
     )
   }

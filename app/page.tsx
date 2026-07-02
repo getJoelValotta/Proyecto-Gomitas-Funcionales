@@ -10,7 +10,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-brand-100/10" />
         
         {/* Navigation */}
-        <nav className="relative z-10 flex justify-between items-center px-6 py-4 max-w-7xl mx-auto">
+        <nav className="relative z-10 flex justify-between items-center px-6 py-4 max-w-7xl mx-auto animate-fade-in-up delay-100">
           <div className="font-bold text-2xl tracking-tighter text-brand-900 flex items-center gap-2">
             <span className="w-8 h-8 rounded-full bg-brand-500 flex items-center justify-center text-white text-sm">GF</span>
             Gomitas Funcionales
@@ -25,13 +25,13 @@ export default function Home() {
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 pt-20 pb-32 sm:pt-32 sm:pb-40 lg:pt-40 lg:pb-48">
           <div className="mx-auto max-w-2xl text-center">
-            <h1 className="text-4xl font-extrabold tracking-tight text-slate-900 sm:text-6xl text-balance">
+            <h1 className="text-4xl font-extrabold tracking-tight text-slate-900 sm:text-6xl text-balance animate-fade-in-up delay-200">
               Gomitas funcionales a partir de <span className="text-brand-500">orujo de uva</span>.
             </h1>
-            <p className="mt-6 text-lg leading-8 text-slate-600">
+            <p className="mt-6 text-lg leading-8 text-slate-600 animate-fade-in-up delay-300">
               Una gomita rica, funcional y con propósito: le damos una segunda vida al orujo de uva para que disfrutes de un snack con más que sabor. Combinan la textura tradicional con fibra alimentaria y antioxidantes naturales como el resveratrol.
             </p>
-            <div className="mt-10 flex items-center justify-center gap-x-6">
+            <div className="mt-10 flex items-center justify-center gap-x-6 animate-fade-in-up delay-300" style={{ animationDelay: '400ms' }}>
               <a
                 href="#contacto"
                 className="rounded-full bg-brand-900 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-brand-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-900 transition-all flex items-center gap-2"
@@ -52,7 +52,7 @@ export default function Home() {
       {/* Características */}
       <section className="py-24 sm:py-32 bg-slate-50" id="sobre-nosotros">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl lg:text-center">
+          <div className="mx-auto max-w-2xl lg:text-center animate-fade-in-up">
             <h2 className="text-base font-semibold leading-7 text-brand-500">Sobre nosotros</h2>
             <p className="mt-2 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl text-balance">
               Innovación circular para tu bienestar
@@ -63,7 +63,7 @@ export default function Home() {
           </div>
           <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
             <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-3 lg:gap-y-16">
-              <div className="relative pl-16">
+              <div className="relative pl-16 animate-fade-in-up delay-100">
                 <dt className="text-base font-semibold leading-7 text-slate-900">
                   <div className="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-brand-500 text-white">
                     <Leaf size={24} />
@@ -74,7 +74,7 @@ export default function Home() {
                   Hacemos upcycling de un residuo de la vitivinicultura regional, fomentando la economía circular en vez de requerir cultivos dedicados.
                 </dd>
               </div>
-              <div className="relative pl-16">
+              <div className="relative pl-16 animate-fade-in-up delay-200">
                 <dt className="text-base font-semibold leading-7 text-slate-900">
                   <div className="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-brand-500 text-white">
                     <Shield size={24} />
@@ -85,7 +85,7 @@ export default function Home() {
                   Pocos ingredientes, todos reconocibles. Sustituimos los azúcares refinados por miel pura de abejas y evitamos conservantes artificiales.
                 </dd>
               </div>
-              <div className="relative pl-16">
+              <div className="relative pl-16 animate-fade-in-up delay-300">
                 <dt className="text-base font-semibold leading-7 text-slate-900">
                   <div className="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-brand-500 text-white">
                     <Zap size={24} />
@@ -107,7 +107,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1550989460-0adf9ea622e2?q=80&w=2000&auto=format&fit=crop')] opacity-10 bg-cover bg-center mix-blend-overlay" />
         
         <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8 flex flex-col lg:flex-row items-center gap-16">
-          <div className="max-w-xl lg:w-1/2">
+          <div className="max-w-xl lg:w-1/2 animate-fade-in-up">
             <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl text-balance">
               Nutrición inteligente y práctica
             </h2>
@@ -115,7 +115,7 @@ export default function Home() {
               Ideal para adultos interesados en bienestar, alimentación saludable y consumo consciente. Disfruta de la practicidad de un formato gomita de 30g sin resignar valor nutricional. Déjanos tus datos para conocer más sobre nuestra alternativa de producción nacional.
             </p>
           </div>
-          <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
+          <div className="w-full lg:w-1/2 flex justify-center lg:justify-end animate-fade-in-up delay-200">
             <ContactForm />
           </div>
         </div>

@@ -143,7 +143,7 @@ export default function StockManager({ initialStock }: { initialStock: StockItem
               <label className="block text-sm font-medium text-slate-700 mb-1">Lote</label>
               <input
                 {...register("lote")}
-                className="w-full px-4 py-2 rounded-lg bg-slate-50 border border-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all"
+                className="w-full px-4 py-2 rounded-lg bg-slate-50 border border-slate-200 text-slate-900 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all"
                 placeholder="Ej. LOTE-001"
               />
               {errors.lote && <p className="text-red-500 text-xs mt-1">{errors.lote.message}</p>}
@@ -153,7 +153,7 @@ export default function StockManager({ initialStock }: { initialStock: StockItem
               <input
                 type="number"
                 {...register("cantidad", { valueAsNumber: true })}
-                className="w-full px-4 py-2 rounded-lg bg-slate-50 border border-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all"
+                className="w-full px-4 py-2 rounded-lg bg-slate-50 border border-slate-200 text-slate-900 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all"
                 placeholder="0"
               />
               {errors.cantidad && <p className="text-red-500 text-xs mt-1">{errors.cantidad.message}</p>}

@@ -167,7 +167,7 @@ export default function ProveedoresManager({ initialProveedores }: { initialProv
               <label className="block text-sm font-medium text-slate-700 mb-1">Nombre</label>
               <input
                 {...register("nombre")}
-                className="w-full px-4 py-2 rounded-lg bg-slate-50 border border-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all"
+                className="w-full px-4 py-2 rounded-lg bg-slate-50 border border-slate-200 text-slate-900 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all"
                 placeholder="Ej. Insumos Naturales S.A."
               />
               {errors.nombre && <p className="text-red-500 text-xs mt-1">{errors.nombre.message}</p>}
@@ -176,7 +176,7 @@ export default function ProveedoresManager({ initialProveedores }: { initialProv
               <label className="block text-sm font-medium text-slate-700 mb-1">Provincia</label>
               <input
                 {...register("provincia")}
-                className="w-full px-4 py-2 rounded-lg bg-slate-50 border border-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all"
+                className="w-full px-4 py-2 rounded-lg bg-slate-50 border border-slate-200 text-slate-900 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all"
                 placeholder="Ej. Buenos Aires"
               />
               {errors.provincia && <p className="text-red-500 text-xs mt-1">{errors.provincia.message}</p>}

@@ -65,7 +65,7 @@ export async function POST(request: Request) {
     `
 
     // Call Gemini API
-    const model = genAI.getGenerativeModel({ model: "gemini-1.5-pro" })
+    const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" })
     const result = await model.generateContent(contextPrompt)
     const response = await result.response
     const text = response.text()

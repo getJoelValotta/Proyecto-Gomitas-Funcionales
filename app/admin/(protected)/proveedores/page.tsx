@@ -20,7 +20,7 @@ export default async function ProveedoresPage() {
 
   return (
     <div>
-      <h1 className="text-3xl font-bold text-slate-900 mb-8">Gestión de Proveedores</h1>
+      <h1 className="text-3xl font-bold text-brand-900 mb-8">Gestión de Proveedores</h1>
       <ProveedoresManager initialProveedores={proveedores || []} />
     </div>
   )

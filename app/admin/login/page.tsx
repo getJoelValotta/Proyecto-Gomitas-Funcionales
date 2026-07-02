@@ -34,7 +34,7 @@ export default function LoginPage() {
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-slate-900 relative">
+    <div className="min-h-screen flex items-center justify-center bg-brand-900 relative">
       <Link 
         href="/"
         className="absolute top-6 left-6 z-20 flex items-center gap-2 text-slate-300 hover:text-white transition-colors text-sm font-medium"
@@ -46,11 +46,11 @@ export default function LoginPage() {
       
       <div className="relative z-10 w-full max-w-md p-8 rounded-2xl bg-white/10 backdrop-blur-xl shadow-2xl border border-white/20">
         <div className="text-center mb-8">
-          <div className="mx-auto w-12 h-12 bg-indigo-500 rounded-full flex items-center justify-center mb-4 shadow-lg shadow-indigo-500/30">
+          <div className="mx-auto w-12 h-12 bg-brand-500 rounded-full flex items-center justify-center mb-4 shadow-lg shadow-brand-500/30">
             <Lock className="text-white" size={24} />
           </div>
           <h2 className="text-3xl font-bold text-white tracking-tight">Panel de Control</h2>
-          <p className="text-slate-300 mt-2 text-sm">Gomitas Funcionales</p>
+          <p className="text-brand-100/80 mt-2 text-sm">Gomitas Funcionales</p>
         </div>
 
         <form onSubmit={handleLogin} className="space-y-6">
@@ -61,7 +61,7 @@ export default function LoginPage() {
           )}
           
           <div>
-            <label className="block text-sm font-medium text-slate-300 mb-1" htmlFor="email">
+            <label className="block text-sm font-medium text-brand-100 mb-1" htmlFor="email">
               Correo Electrónico
             </label>
             <input
@@ -69,14 +69,14 @@ export default function LoginPage() {
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="w-full px-4 py-3 rounded-xl bg-slate-800/50 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all"
+              className="w-full px-4 py-3 rounded-xl bg-black/30 border border-brand-700 text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-brand-500 transition-all"
               placeholder="admin@ejemplo.com"
               required
             />
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-slate-300 mb-1" htmlFor="password">
+            <label className="block text-sm font-medium text-brand-100 mb-1" htmlFor="password">
               Contraseña
             </label>
             <input
@@ -84,7 +84,7 @@ export default function LoginPage() {
               type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="w-full px-4 py-3 rounded-xl bg-slate-800/50 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all"
+              className="w-full px-4 py-3 rounded-xl bg-black/30 border border-brand-700 text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-brand-500 transition-all"
               placeholder="••••••••"
               required
             />
@@ -93,7 +93,7 @@ export default function LoginPage() {
           <button
             type="submit"
             disabled={loading}
-            className="w-full py-3 px-4 flex justify-center items-center gap-2 rounded-xl text-white font-semibold bg-indigo-600 hover:bg-indigo-500 focus:ring-2 focus:ring-offset-2 focus:ring-offset-slate-900 focus:ring-indigo-500 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed shadow-lg shadow-indigo-600/20"
+            className="w-full py-3 px-4 flex justify-center items-center gap-2 rounded-xl text-white font-semibold bg-brand-500 hover:bg-brand-700 focus:ring-2 focus:ring-offset-2 focus:ring-offset-brand-900 focus:ring-brand-500 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed shadow-lg shadow-brand-500/20"
           >
             {loading ? (
               <Loader2 className="animate-spin" size={20} />

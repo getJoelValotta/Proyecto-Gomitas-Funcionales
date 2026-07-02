@@ -62,7 +62,7 @@ export default function ChatWidget() {
       {/* Chat Button */}
       <button
         onClick={() => setIsOpen(true)}
-        className={`fixed bottom-6 right-6 p-4 rounded-full bg-indigo-600 text-white shadow-lg hover:bg-indigo-700 transition-all transform hover:scale-105 z-40 ${isOpen ? 'scale-0 opacity-0' : 'scale-100 opacity-100'}`}
+        className={`fixed bottom-6 right-6 p-4 rounded-full bg-brand-500 text-white shadow-lg hover:bg-brand-700 transition-all transform hover:scale-105 z-40 ${isOpen ? 'scale-0 opacity-0' : 'scale-100 opacity-100'}`}
       >
         <MessageSquare size={24} />
       </button>
@@ -72,7 +72,7 @@ export default function ChatWidget() {
         className={`fixed bottom-6 right-6 w-96 h-[500px] bg-white rounded-2xl shadow-2xl border border-slate-200 flex flex-col z-50 transition-all duration-300 transform origin-bottom-right ${isOpen ? 'scale-100 opacity-100' : 'scale-50 opacity-0 pointer-events-none'}`}
       >
         {/* Header */}
-        <div className="bg-indigo-600 text-white p-4 rounded-t-2xl flex justify-between items-center">
+        <div className="bg-brand-500 text-white p-4 rounded-t-2xl flex justify-between items-center">
           <div className="flex items-center gap-2 font-semibold">
             <Bot size={20} />
             Asistente IA
@@ -90,21 +90,21 @@ export default function ChatWidget() {
           {messages.map((msg, idx) => (
             <div key={idx} className={`flex gap-2 ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}>
               {msg.role === 'assistant' && (
-                <div className="w-8 h-8 rounded-full bg-indigo-100 flex items-center justify-center text-indigo-600 shrink-0">
+                <div className="w-8 h-8 rounded-full bg-brand-100 flex items-center justify-center text-brand-500 shrink-0">
                   <Bot size={16} />
                 </div>
               )}
               <div
                 className={`max-w-[80%] p-3 rounded-2xl text-sm shadow-sm ${
                   msg.role === 'user'
-                    ? 'bg-indigo-600 text-white rounded-tr-sm'
-                    : 'bg-white text-slate-700 border border-slate-200 rounded-tl-sm'
+                    ? 'bg-brand-500 text-white rounded-tr-sm'
+                    : 'bg-white text-brand-900 border border-slate-200 rounded-tl-sm'
                 }`}
               >
                 {msg.content}
               </div>
               {msg.role === 'user' && (
-                <div className="w-8 h-8 rounded-full bg-slate-200 flex items-center justify-center text-slate-600 shrink-0">
+                <div className="w-8 h-8 rounded-full bg-brand-100 flex items-center justify-center text-brand-700 shrink-0">
                   <User size={16} />
                 </div>
               )}
@@ -112,10 +112,10 @@ export default function ChatWidget() {
           ))}
           {isLoading && (
             <div className="flex gap-2 justify-start">
-               <div className="w-8 h-8 rounded-full bg-indigo-100 flex items-center justify-center text-indigo-600 shrink-0">
+               <div className="w-8 h-8 rounded-full bg-brand-100 flex items-center justify-center text-brand-500 shrink-0">
                   <Bot size={16} />
                 </div>
-              <div className="bg-white p-3 rounded-2xl rounded-tl-sm border border-slate-200 flex items-center gap-2 text-slate-500">
+              <div className="bg-white p-3 rounded-2xl rounded-tl-sm border border-slate-200 flex items-center gap-2 text-brand-700">
                 <Loader2 size={16} className="animate-spin" /> Escribiendo...
               </div>
             </div>
@@ -130,13 +130,13 @@ export default function ChatWidget() {
             value={input}
             onChange={(e) => setInput(e.target.value)}
             placeholder="Pregunta sobre stock o proveedores..."
-            className="flex-1 px-4 py-2 bg-slate-100 border-transparent rounded-full text-sm text-slate-900 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:bg-white transition-all"
+            className="flex-1 px-4 py-2 bg-slate-100 border-transparent rounded-full text-sm text-brand-900 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:bg-white transition-all"
             disabled={isLoading}
           />
           <button
             type="submit"
             disabled={isLoading || !input.trim()}
-            className="p-2 rounded-full bg-indigo-600 text-white hover:bg-indigo-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+            className="p-2 rounded-full bg-brand-500 text-white hover:bg-brand-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors relative"
           >
             <Send size={18} className={isLoading ? 'opacity-0' : 'opacity-100'} />
             {isLoading && <Loader2 size={18} className="animate-spin absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />}

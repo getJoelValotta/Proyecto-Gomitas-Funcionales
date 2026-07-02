@@ -58,7 +58,7 @@ export default function ContactForm() {
   return (
     <div className="w-full max-w-md p-8 rounded-2xl bg-white/80 backdrop-blur-md shadow-xl border border-white/20">
       <h3 className="text-2xl font-bold text-gray-800 mb-6 flex items-center gap-2">
-        <Send className="text-indigo-500" size={24} />
+        <Send className="text-brand-500" size={24} />
         Contáctanos
       </h3>
 
@@ -90,7 +90,7 @@ export default function ContactForm() {
           <input
             {...register("nombre")}
             id="nombre"
-            className="w-full px-4 py-2 rounded-lg bg-gray-50 border border-gray-200 text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all duration-200"
+            className="w-full px-4 py-2 rounded-lg bg-gray-50 border border-gray-200 text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-brand-500 transition-all duration-200"
             placeholder="Tu nombre"
           />
           {errors.nombre && (
@@ -106,7 +106,7 @@ export default function ContactForm() {
             {...register("email")}
             id="email"
             type="email"
-            className="w-full px-4 py-2 rounded-lg bg-gray-50 border border-gray-200 text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all duration-200"
+            className="w-full px-4 py-2 rounded-lg bg-gray-50 border border-gray-200 text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-brand-500 transition-all duration-200"
             placeholder="tu@email.com"
           />
           {errors.email && (
@@ -122,7 +122,7 @@ export default function ContactForm() {
             {...register("mensaje")}
             id="mensaje"
             rows={4}
-            className="w-full px-4 py-2 rounded-lg bg-gray-50 border border-gray-200 text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all duration-200 resize-none"
+            className="w-full px-4 py-2 rounded-lg bg-gray-50 border border-gray-200 text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-brand-500 transition-all duration-200 resize-none"
             placeholder="¿En qué podemos ayudarte?"
           />
           {errors.mensaje && (
@@ -133,7 +133,7 @@ export default function ContactForm() {
         <button
           type="submit"
           disabled={status === "loading"}
-          className="w-full py-3 px-4 flex justify-center items-center gap-2 rounded-lg text-white font-medium bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-all duration-200 transform hover:-translate-y-0.5 active:translate-y-0 disabled:opacity-70 disabled:cursor-not-allowed disabled:transform-none shadow-lg shadow-indigo-500/30"
+          className="w-full py-3 px-4 flex justify-center items-center gap-2 rounded-lg text-white font-medium bg-brand-500 hover:bg-brand-700 focus:ring-2 focus:ring-offset-2 focus:ring-brand-500 transition-all duration-200 transform hover:-translate-y-0.5 active:translate-y-0 disabled:opacity-70 disabled:cursor-not-allowed disabled:transform-none shadow-lg shadow-brand-500/30"
         >
           {status === "loading" ? (
             <>

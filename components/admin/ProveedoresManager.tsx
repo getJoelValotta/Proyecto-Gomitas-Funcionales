@@ -129,14 +129,14 @@ export default function ProveedoresManager({ initialProveedores }: { initialProv
       )}
 
       {/* Header Actions & Filters */}
-      <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 bg-white p-4 rounded-2xl shadow-sm border border-slate-200">
+      <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 bg-white p-4 rounded-2xl shadow-sm border border-brand-100">
         <div className="flex items-center gap-3 w-full md:w-auto">
           <div className="relative w-full md:w-64">
-            <MapPin className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" size={18} />
+            <MapPin className="absolute left-3 top-1/2 -translate-y-1/2 text-brand-700/50" size={18} />
             <select
               value={filtroProvincia}
               onChange={(e) => setFiltroProvincia(e.target.value)}
-              className="w-full pl-10 pr-4 py-2 rounded-lg bg-slate-50 border border-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 appearance-none text-slate-700"
+              className="w-full pl-10 pr-4 py-2 rounded-lg bg-brand-100/10 border border-brand-100 focus:outline-none focus:ring-2 focus:ring-brand-500 appearance-none text-brand-900"
             >
               {provinciasUnicas.map(prov => (
                 <option key={prov} value={prov}>{prov}</option>
@@ -148,7 +148,7 @@ export default function ProveedoresManager({ initialProveedores }: { initialProv
         {!isAdding && !editingId && (
           <button
             onClick={() => { setIsAdding(true); reset() }}
-            className="flex items-center gap-2 bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition-colors shadow-sm w-full md:w-auto justify-center"
+            className="flex items-center gap-2 bg-brand-500 text-white px-4 py-2 rounded-lg hover:bg-brand-700 transition-colors shadow-sm w-full md:w-auto justify-center"
           >
             <Plus size={18} />
             Nuevo Proveedor
@@ -158,25 +158,25 @@ export default function ProveedoresManager({ initialProveedores }: { initialProv
 
       {/* Form (Add / Edit) */}
       {(isAdding || editingId) && (
-        <form onSubmit={handleSubmit(onSubmit)} className="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 animate-in fade-in slide-in-from-top-4">
-          <h3 className="text-lg font-medium text-slate-800 mb-4">
+        <form onSubmit={handleSubmit(onSubmit)} className="bg-white p-6 rounded-2xl shadow-sm border border-brand-100 animate-in fade-in slide-in-from-top-4">
+          <h3 className="text-lg font-medium text-brand-900 mb-4">
             {editingId ? "Editar Proveedor" : "Nuevo Proveedor"}
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
             <div>
-              <label className="block text-sm font-medium text-slate-700 mb-1">Nombre</label>
+              <label className="block text-sm font-medium text-brand-900 mb-1">Nombre</label>
               <input
                 {...register("nombre")}
-                className="w-full px-4 py-2 rounded-lg bg-slate-50 border border-slate-200 text-slate-900 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all"
+                className="w-full px-4 py-2 rounded-lg bg-brand-100/10 border border-brand-100 text-brand-900 placeholder-brand-700/50 focus:outline-none focus:ring-2 focus:ring-brand-500 transition-all"
                 placeholder="Ej. Insumos Naturales S.A."
               />
               {errors.nombre && <p className="text-red-500 text-xs mt-1">{errors.nombre.message}</p>}
             </div>
             <div>
-              <label className="block text-sm font-medium text-slate-700 mb-1">Provincia</label>
+              <label className="block text-sm font-medium text-brand-900 mb-1">Provincia</label>
               <input
                 {...register("provincia")}
-                className="w-full px-4 py-2 rounded-lg bg-slate-50 border border-slate-200 text-slate-900 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all"
+                className="w-full px-4 py-2 rounded-lg bg-brand-100/10 border border-brand-100 text-brand-900 placeholder-brand-700/50 focus:outline-none focus:ring-2 focus:ring-brand-500 transition-all"
                 placeholder="Ej. Buenos Aires"
               />
               {errors.provincia && <p className="text-red-500 text-xs mt-1">{errors.provincia.message}</p>}
@@ -186,14 +186,14 @@ export default function ProveedoresManager({ initialProveedores }: { initialProv
             <button
               type="button"
               onClick={cancelEdit}
-              className="px-4 py-2 rounded-lg text-slate-600 hover:bg-slate-100 transition-colors"
+              className="px-4 py-2 rounded-lg text-brand-700/80 hover:bg-brand-100/20 transition-colors"
             >
               Cancelar
             </button>
             <button
               type="submit"
               disabled={loading}
-              className="flex items-center gap-2 bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition-colors disabled:opacity-50"
+              className="flex items-center gap-2 bg-brand-500 text-white px-4 py-2 rounded-lg hover:bg-brand-700 transition-colors disabled:opacity-50"
             >
               {loading ? <Loader2 className="animate-spin" size={18} /> : <Save size={18} />}
               Guardar
@@ -203,10 +203,10 @@ export default function ProveedoresManager({ initialProveedores }: { initialProv
       )}
 
       {/* Table */}
-      <div className="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
+      <div className="bg-white rounded-2xl shadow-sm border border-brand-100 overflow-hidden">
         <table className="w-full text-left border-collapse">
           <thead>
-            <tr className="bg-slate-50 border-b border-slate-200 text-slate-600 text-sm">
+            <tr className="bg-brand-100/10 border-b border-brand-100 text-brand-700/80 text-sm">
               <th className="py-3 px-6 font-medium">Nombre</th>
               <th className="py-3 px-6 font-medium">Provincia</th>
               <th className="py-3 px-6 font-medium text-right">Acciones</th>
@@ -215,23 +215,23 @@ export default function ProveedoresManager({ initialProveedores }: { initialProv
           <tbody>
             {proveedoresFiltrados.length === 0 ? (
               <tr>
-                <td colSpan={3} className="py-8 text-center text-slate-500">
+                <td colSpan={3} className="py-8 text-center text-brand-700/60">
                   No se encontraron proveedores.
                 </td>
               </tr>
             ) : (
               proveedoresFiltrados.map((item) => (
-                <tr key={item.id} className="border-b border-slate-100 hover:bg-slate-50/50 transition-colors">
-                  <td className="py-3 px-6 font-medium text-slate-800">{item.nombre}</td>
-                  <td className="py-3 px-6 text-slate-600 flex items-center gap-1">
-                    <MapPin size={14} className="text-slate-400" />
+                <tr key={item.id} className="border-b border-brand-100/50 hover:bg-brand-100/10 transition-colors">
+                  <td className="py-3 px-6 font-medium text-brand-900">{item.nombre}</td>
+                  <td className="py-3 px-6 text-brand-700/80 flex items-center gap-1">
+                    <MapPin size={14} className="text-brand-700/50" />
                     {item.provincia}
                   </td>
                   <td className="py-3 px-6 flex justify-end gap-2">
                     <button
                       onClick={() => startEdit(item)}
                       disabled={loading}
-                      className="p-2 text-slate-400 hover:text-indigo-600 hover:bg-indigo-50 rounded-lg transition-colors disabled:opacity-50"
+                      className="p-2 text-brand-700/50 hover:text-brand-500 hover:bg-brand-100/20 rounded-lg transition-colors disabled:opacity-50"
                       title="Editar"
                     >
                       <Edit2 size={18} />
@@ -239,7 +239,7 @@ export default function ProveedoresManager({ initialProveedores }: { initialProv
                     <button
                       onClick={() => handleDelete(item.id)}
                       disabled={loading}
-                      className="p-2 text-slate-400 hover:text-red-600 hover:bg-red-50 rounded-lg transition-colors disabled:opacity-50"
+                      className="p-2 text-brand-700/50 hover:text-red-600 hover:bg-red-50 rounded-lg transition-colors disabled:opacity-50"
                       title="Eliminar"
                     >
                       <Trash2 size={18} />

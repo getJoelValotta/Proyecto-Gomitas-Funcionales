@@ -120,11 +120,11 @@ export default function StockManager({ initialStock }: { initialStock: StockItem
 
       {/* Header Actions */}
       <div className="flex justify-between items-center">
-        <h2 className="text-xl font-semibold text-slate-800">Inventario Actual</h2>
+        <h2 className="text-xl font-semibold text-brand-900">Inventario Actual</h2>
         {!isAdding && !editingId && (
           <button
             onClick={() => { setIsAdding(true); reset() }}
-            className="flex items-center gap-2 bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition-colors shadow-sm"
+            className="flex items-center gap-2 bg-brand-500 text-white px-4 py-2 rounded-lg hover:bg-brand-700 transition-colors shadow-sm"
           >
             <Plus size={18} />
             Nuevo Registro
@@ -134,26 +134,26 @@ export default function StockManager({ initialStock }: { initialStock: StockItem
 
       {/* Form (Add / Edit) */}
       {(isAdding || editingId) && (
-        <form onSubmit={handleSubmit(onSubmit)} className="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 animate-in fade-in slide-in-from-top-4">
-          <h3 className="text-lg font-medium text-slate-800 mb-4">
+        <form onSubmit={handleSubmit(onSubmit)} className="bg-white p-6 rounded-2xl shadow-sm border border-brand-100 animate-in fade-in slide-in-from-top-4">
+          <h3 className="text-lg font-medium text-brand-900 mb-4">
             {editingId ? "Editar Registro" : "Nuevo Registro"}
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
             <div>
-              <label className="block text-sm font-medium text-slate-700 mb-1">Lote</label>
+              <label className="block text-sm font-medium text-brand-900 mb-1">Lote</label>
               <input
                 {...register("lote")}
-                className="w-full px-4 py-2 rounded-lg bg-slate-50 border border-slate-200 text-slate-900 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all"
+                className="w-full px-4 py-2 rounded-lg bg-brand-100/10 border border-brand-100 text-brand-900 placeholder-brand-700/50 focus:outline-none focus:ring-2 focus:ring-brand-500 transition-all"
                 placeholder="Ej. LOTE-001"
               />
               {errors.lote && <p className="text-red-500 text-xs mt-1">{errors.lote.message}</p>}
             </div>
             <div>
-              <label className="block text-sm font-medium text-slate-700 mb-1">Cantidad</label>
+              <label className="block text-sm font-medium text-brand-900 mb-1">Cantidad</label>
               <input
                 type="number"
                 {...register("cantidad", { valueAsNumber: true })}
-                className="w-full px-4 py-2 rounded-lg bg-slate-50 border border-slate-200 text-slate-900 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all"
+                className="w-full px-4 py-2 rounded-lg bg-brand-100/10 border border-brand-100 text-brand-900 placeholder-brand-700/50 focus:outline-none focus:ring-2 focus:ring-brand-500 transition-all"
                 placeholder="0"
               />
               {errors.cantidad && <p className="text-red-500 text-xs mt-1">{errors.cantidad.message}</p>}
@@ -163,14 +163,14 @@ export default function StockManager({ initialStock }: { initialStock: StockItem
             <button
               type="button"
               onClick={cancelEdit}
-              className="px-4 py-2 rounded-lg text-slate-600 hover:bg-slate-100 transition-colors"
+              className="px-4 py-2 rounded-lg text-brand-700/80 hover:bg-brand-100/20 transition-colors"
             >
               Cancelar
             </button>
             <button
               type="submit"
               disabled={loading}
-              className="flex items-center gap-2 bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition-colors disabled:opacity-50"
+              className="flex items-center gap-2 bg-brand-500 text-white px-4 py-2 rounded-lg hover:bg-brand-700 transition-colors disabled:opacity-50"
             >
               {loading ? <Loader2 className="animate-spin" size={18} /> : <Save size={18} />}
               Guardar
@@ -180,10 +180,10 @@ export default function StockManager({ initialStock }: { initialStock: StockItem
       )}
 
       {/* Table */}
-      <div className="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
+      <div className="bg-white rounded-2xl shadow-sm border border-brand-100 overflow-hidden">
         <table className="w-full text-left border-collapse">
           <thead>
-            <tr className="bg-slate-50 border-b border-slate-200 text-slate-600 text-sm">
+            <tr className="bg-brand-100/10 border-b border-brand-100 text-brand-700/80 text-sm">
               <th className="py-3 px-6 font-medium">Lote</th>
               <th className="py-3 px-6 font-medium">Cantidad</th>
               <th className="py-3 px-6 font-medium text-right">Acciones</th>
@@ -192,14 +192,14 @@ export default function StockManager({ initialStock }: { initialStock: StockItem
           <tbody>
             {stock.length === 0 ? (
               <tr>
-                <td colSpan={3} className="py-8 text-center text-slate-500">
+                <td colSpan={3} className="py-8 text-center text-brand-700/60">
                   No hay registros de stock.
                 </td>
               </tr>
             ) : (
               stock.map((item) => (
-                <tr key={item.id} className="border-b border-slate-100 hover:bg-slate-50/50 transition-colors">
-                  <td className="py-3 px-6 font-medium text-slate-800">{item.lote}</td>
+                <tr key={item.id} className="border-b border-brand-100/50 hover:bg-brand-100/10 transition-colors">
+                  <td className="py-3 px-6 font-medium text-brand-900">{item.lote}</td>
                   <td className="py-3 px-6">
                     <span className={`px-2.5 py-1 rounded-full text-xs font-medium ${
                       item.cantidad < 10 ? 'bg-red-100 text-red-700' : 'bg-emerald-100 text-emerald-700'
@@ -211,7 +211,7 @@ export default function StockManager({ initialStock }: { initialStock: StockItem
                     <button
                       onClick={() => startEdit(item)}
                       disabled={loading}
-                      className="p-2 text-slate-400 hover:text-indigo-600 hover:bg-indigo-50 rounded-lg transition-colors disabled:opacity-50"
+                      className="p-2 text-brand-700/50 hover:text-brand-500 hover:bg-brand-100/20 rounded-lg transition-colors disabled:opacity-50"
                       title="Editar"
                     >
                       <Edit2 size={18} />
@@ -219,7 +219,7 @@ export default function StockManager({ initialStock }: { initialStock: StockItem
                     <button
                       onClick={() => handleDelete(item.id)}
                       disabled={loading}
-                      className="p-2 text-slate-400 hover:text-red-600 hover:bg-red-50 rounded-lg transition-colors disabled:opacity-50"
+                      className="p-2 text-brand-700/50 hover:text-red-600 hover:bg-red-50 rounded-lg transition-colors disabled:opacity-50"
                       title="Eliminar"
                     >
                       <Trash2 size={18} />

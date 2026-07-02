@@ -15,7 +15,7 @@ type StockItem = {
 
 const formSchema = z.object({
   lote: z.string().min(1, "El lote es requerido"),
-  cantidad: z.coerce.number().min(0, "La cantidad debe ser 0 o mayor"),
+  cantidad: z.number().min(0, "La cantidad debe ser 0 o mayor"),
 })
 
 type FormValues = z.infer<typeof formSchema>
@@ -31,6 +31,10 @@ export default function StockManager({ initialStock }: { initialStock: StockItem
 
   const { register, handleSubmit, reset, setValue, formState: { errors } } = useForm<FormValues>({
     resolver: zodResolver(formSchema),
+    defaultValues: {
+      lote: "",
+      cantidad: 0,
+    },
   })
 
   const onSubmit = async (data: FormValues) => {
@@ -148,7 +152,7 @@ export default function StockManager({ initialStock }: { initialStock: StockItem
               <label className="block text-sm font-medium text-slate-700 mb-1">Cantidad</label>
               <input
                 type="number"
-                {...register("cantidad")}
+                {...register("cantidad", { valueAsNumber: true })}
                 className="w-full px-4 py-2 rounded-lg bg-slate-50 border border-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all"
                 placeholder="0"
               />

@@ -32,6 +32,10 @@ export default function ProveedoresManager({ initialProveedores }: { initialProv
 
   const { register, handleSubmit, reset, setValue, formState: { errors } } = useForm<FormValues>({
     resolver: zodResolver(formSchema),
+    defaultValues: {
+      nombre: "",
+      provincia: "",
+    },
   })
 
   // Obtener provincias únicas para el filtro

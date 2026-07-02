@@ -26,20 +26,20 @@ export default function Home() {
         <div className="relative z-10 max-w-7xl mx-auto px-6 pt-20 pb-32 sm:pt-32 sm:pb-40 lg:pt-40 lg:pb-48">
           <div className="mx-auto max-w-2xl text-center">
             <h1 className="text-4xl font-extrabold tracking-tight text-slate-900 sm:text-6xl text-balance">
-              El futuro de tu bienestar, en una <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-purple-600">gomita</span>.
+              Gomitas funcionales a partir de <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-purple-600">orujo de uva</span>.
             </h1>
             <p className="mt-6 text-lg leading-8 text-slate-600">
-              Descubre nuestras gomitas funcionales. Diseñadas científicamente con ingredientes naturales para darte la energía, concentración y calma que necesitas cada día.
+              Una gomita rica, funcional y con propósito: le damos una segunda vida al orujo de uva para que disfrutes de un snack con más que sabor. Combinan la textura tradicional con fibra alimentaria y antioxidantes naturales como el resveratrol.
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <a
                 href="#contacto"
                 className="rounded-full bg-slate-900 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-slate-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900 transition-all flex items-center gap-2"
               >
-                Hacer un pedido <ArrowRight size={16} />
+                Más Información <ArrowRight size={16} />
               </a>
               <a href="#sobre-nosotros" className="text-sm font-semibold leading-6 text-slate-900 hover:text-indigo-600 transition-colors">
-                Saber más <span aria-hidden="true">→</span>
+                Nuestra Historia <span aria-hidden="true">→</span>
               </a>
             </div>
           </div>
@@ -55,10 +55,10 @@ export default function Home() {
           <div className="mx-auto max-w-2xl lg:text-center">
             <h2 className="text-base font-semibold leading-7 text-indigo-600">Sobre nosotros</h2>
             <p className="mt-2 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl text-balance">
-              Ingredientes puros, resultados reales
+              Innovación circular para tu bienestar
             </p>
             <p className="mt-6 text-lg leading-8 text-slate-600">
-              Somos pioneros en la creación de suplementos funcionales en formato de gomitas. Nuestro objetivo es hacer que cuidar tu salud sea no solo efectivo, sino también delicioso.
+              El proyecto nace en la costa atlántica bonaerense con una propuesta de economía circular: transformar el orujo de uva —un subproducto descartado por las bodegas de la zona— en un ingrediente funcional para un snack saludable y nacional.
             </p>
           </div>
           <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
@@ -68,21 +68,10 @@ export default function Home() {
                   <div className="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600 text-white">
                     <Leaf size={24} />
                   </div>
-                  100% Naturales
+                  Ingrediente Sustentable
                 </dt>
                 <dd className="mt-2 text-base leading-7 text-slate-600">
-                  Utilizamos extractos botánicos de la más alta calidad, sin conservantes ni colorantes artificiales.
-                </dd>
-              </div>
-              <div className="relative pl-16">
-                <dt className="text-base font-semibold leading-7 text-slate-900">
-                  <div className="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600 text-white">
-                    <Zap size={24} />
-                  </div>
-                  Acción Rápida
-                </dt>
-                <dd className="mt-2 text-base leading-7 text-slate-600">
-                  Nuestra fórmula patentada asegura una absorción un 30% más rápida que las cápsulas tradicionales.
+                  Hacemos upcycling de un residuo de la vitivinicultura regional, fomentando la economía circular en vez de requerir cultivos dedicados.
                 </dd>
               </div>
               <div className="relative pl-16">
@@ -90,10 +79,21 @@ export default function Home() {
                   <div className="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600 text-white">
                     <Shield size={24} />
                   </div>
-                  Calidad Certificada
+                  Etiqueta Limpia
                 </dt>
                 <dd className="mt-2 text-base leading-7 text-slate-600">
-                  Cada lote es testeado en laboratorios independientes para garantizar su pureza y potencia.
+                  Pocos ingredientes, todos reconocibles. Sustituimos los azúcares refinados por miel pura de abejas y evitamos conservantes artificiales.
+                </dd>
+              </div>
+              <div className="relative pl-16">
+                <dt className="text-base font-semibold leading-7 text-slate-900">
+                  <div className="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600 text-white">
+                    <Zap size={24} />
+                  </div>
+                  Valor Nutricional
+                </dt>
+                <dd className="mt-2 text-base leading-7 text-slate-600">
+                  Ricas en fibra alimentaria y polifenoles antioxidantes provenientes del orujo, manteniendo la textura, masticabilidad y sabor tradicionales.
                 </dd>
               </div>
             </dl>
@@ -109,10 +109,10 @@ export default function Home() {
         <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8 flex flex-col lg:flex-row items-center gap-16">
           <div className="max-w-xl lg:w-1/2">
             <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl text-balance">
-              ¿Listo para mejorar tu rutina?
+              Nutrición inteligente y práctica
             </h2>
             <p className="mt-6 text-lg leading-8 text-slate-300">
-              Déjanos tus datos y nos pondremos en contacto contigo para asesorarte sobre cuáles son las gomitas funcionales ideales para ti o para realizar un pedido mayorista.
+              Ideal para adultos interesados en bienestar, alimentación saludable y consumo consciente. Disfruta de la practicidad de un formato gomita de 30g sin resignar valor nutricional. Déjanos tus datos para conocer más sobre nuestra alternativa de producción nacional.
             </p>
           </div>
           <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">

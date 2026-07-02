@@ -17,7 +17,7 @@ export async function POST(request: Request) {
 
     const { data, error } = await resend.emails.send({
       from: "Gomitas Funcionales <onboarding@resend.dev>", // Usar el dominio verificado en Resend en producción
-      to: ["tu-correo@ejemplo.com"], // Cambiar por tu correo real
+      to: ["valottajoel@gmail.com"], // Correo donde se reciben los contactos
       subject: `Nuevo mensaje de contacto de ${nombre}`,
       replyTo: email,
       html: `

@@ -90,7 +90,7 @@ export default function ContactForm() {
           <input
             {...register("nombre")}
             id="nombre"
-            className="w-full px-4 py-2 rounded-lg bg-gray-50 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all duration-200"
+            className="w-full px-4 py-2 rounded-lg bg-gray-50 border border-gray-200 text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all duration-200"
             placeholder="Tu nombre"
           />
           {errors.nombre && (
@@ -106,7 +106,7 @@ export default function ContactForm() {
             {...register("email")}
             id="email"
             type="email"
-            className="w-full px-4 py-2 rounded-lg bg-gray-50 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all duration-200"
+            className="w-full px-4 py-2 rounded-lg bg-gray-50 border border-gray-200 text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all duration-200"
             placeholder="tu@email.com"
           />
           {errors.email && (
@@ -122,7 +122,7 @@ export default function ContactForm() {
             {...register("mensaje")}
             id="mensaje"
             rows={4}
-            className="w-full px-4 py-2 rounded-lg bg-gray-50 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all duration-200 resize-none"
+            className="w-full px-4 py-2 rounded-lg bg-gray-50 border border-gray-200 text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all duration-200 resize-none"
             placeholder="¿En qué podemos ayudarte?"
           />
           {errors.mensaje && (

@@ -1,7 +1,7 @@
 import { createClient } from "@/lib/supabase/server"
 import { redirect } from "next/navigation"
 import Link from "next/link"
-import { LayoutDashboard, Package, Truck, LogOut } from "lucide-react"
+import { LayoutDashboard, Package, Truck, LogOut, Globe } from "lucide-react"
 import ChatWidget from "@/components/ChatWidget"
 
 export default async function AdminLayout({
@@ -28,6 +28,13 @@ export default async function AdminLayout({
         </div>
         
         <nav className="flex-1 px-4 space-y-1">
+          <Link
+            href="/"
+            className="flex items-center gap-3 px-4 py-3 mb-4 rounded-lg bg-indigo-500/10 text-indigo-400 hover:bg-indigo-500/20 hover:text-indigo-300 transition-colors font-medium border border-indigo-500/20"
+          >
+            <Globe size={20} />
+            Ver sitio web
+          </Link>
           <Link
             href="/admin/dashboard"
             className="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-white/10 hover:text-white transition-colors"
